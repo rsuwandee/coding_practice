@@ -1,0 +1,40 @@
+import java.util.*;
+/**
+ * This reverse string program reverses a string given from the scanner
+ * @author Randy Suwandee
+ */
+public class String_Reverse {
+
+    /**
+     * Main methods calls the userInterface method
+     * @param args
+     */
+    public static void main(String[] args) {
+        userInterface();
+    }
+    
+    /**
+     * This method does all the work
+     */
+    public static void userInterface(){
+        //creates scanner, prompts, and stores input
+        Scanner console = new Scanner(System.in);
+        System.out.print("Enter a string you want reversed: ");
+        String input = console.nextLine();
+        String result = reverse(input);
+        System.out.println("The string reversed is: " + result);
+    }
+    /**
+     * This method reverses a given string
+     * @param s string given from scanner
+     * @return reversed string
+     */
+    public static String reverse(String s){
+        String reversedString = "";
+        for(int i=s.length()-1; i>=0; i--){
+            reversedString += s.charAt(i);
+        }
+        return reversedString;
+    }
+    
+}
